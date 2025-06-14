@@ -1,0 +1,242 @@
+/* General Body and Typography */
+body {
+    font-family: 'Roboto', sans-serif;
+    /* Sets Roboto as the primary font for body text */
+    line-height: 1.6;
+    /* Improves readability of text */
+    margin: 0;
+    /* Removes default body margin */
+    padding: 0;
+    /* Removes default body padding */
+    background-color: #f4f7f6;
+    /* Light grey background for the page */
+    color: #333;
+    /* Dark grey text color */
+}
+
+/* Headings Styling */
+h1,
+h2 {
+    font-family: 'Playfair Display', serif;
+    /* Sets Playfair Display as the font for headings */
+    color: #4a4a4a;
+    /* Slightly darker grey for headings */
+    text-align: center;
+    /* Centers headings */
+    margin-bottom: 20px;
+    /* Space below headings */
+}
+
+h2 {
+    border-bottom: 2px solid #e0e0e0;
+    /* A subtle line under each section heading */
+    padding-bottom: 10px;
+    /* Space between heading text and the line */
+    margin-top: 30px;
+    /* Space above section headings */
+}
+
+/* Main Container for content */
+.container {
+    max-width: 900px;
+    /* Limits the maximum width of the content area */
+    margin: 20px auto;
+    /* Centers the container horizontally and adds vertical margin */
+    padding: 0 20px;
+    /* Adds padding on the sides for smaller screens */
+}
+
+/* Header/Hero Section Styling */
+.hero {
+    /* Background with a gradient overlay and a background image */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-background.jpg') no-repeat center center/cover;
+    color: white;
+    /* White text for contrast on the dark background */
+    text-align: center;
+    /* Centers text within the hero */
+    padding: 80px 20px;
+    /* Top/bottom and side padding */
+    margin-bottom: 30px;
+    /* Space below the hero section */
+    display: flex;
+    /* Uses flexbox for easy centering of content */
+    justify-content: center;
+    /* Centers content horizontally */
+    align-items: center;
+    /* Centers content vertically */
+    min-height: 250px;
+    /* Minimum height for the hero section */
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    /* Larger font size for the main name */
+    margin-bottom: 10px;
+    /* Space below the name */
+    color: white;
+    /* Ensures heading color is white */
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    /* Slightly larger font for the tagline */
+    font-style: italic;
+    /* Italic style for the tagline */
+    color: rgba(255, 255, 255, 0.9);
+    /* Slightly transparent white for the tagline */
+}
+
+/* Card Styling for individual sections */
+.card {
+    background-color: white;
+    /* White background for each biodata section */
+    border-radius: 8px;
+    /* Rounded corners for the cards */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    /* Soft shadow for a lifted effect */
+    padding: 30px;
+    /* Internal padding within each card */
+    margin-bottom: 30px;
+    /* Space between cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transition for hover effects */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    /* Lifts the card slightly on hover */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    /* Larger shadow on hover */
+}
+
+/* Profile Image Styling */
+.profile-image {
+    text-align: center;
+    /* Centers the image */
+    margin-bottom: 20px;
+    /* Space below the image */
+}
+
+.profile-image img {
+    width: 200px;
+    /* Fixed width for the image */
+    height: 200px;
+    /* Fixed height for the image */
+    border-radius: 50%;
+    /* Makes the image circular */
+    object-fit: cover;
+    /* Ensures the image covers the area without distortion */
+    border: 5px solid #fff;
+    /* White border around the image */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for the image */
+}
+
+/* Styling for unordered lists (used in details sections) */
+ul {
+    list-style: none;
+    /* Removes default bullet points */
+    padding: 0;
+    /* Removes default padding */
+}
+
+ul li {
+    margin-bottom: 10px;
+    /* Space between list items */
+    padding-left: 25px;
+    /* Indent for list content */
+    position: relative;
+    /* Needed for positioning the custom bullet point */
+}
+
+ul li strong {
+    color: #007bff;
+    /* A nice blue color for the labels (e.g., "Full Name:") */
+}
+
+ul li::before {
+    content: '•';
+    /* Custom bullet point character */
+    color: #007bff;
+    /* Color of the custom bullet point */
+    font-size: 1.2em;
+    /* Size of the custom bullet point */
+    position: absolute;
+    /* Positions the bullet point relative to the list item */
+    left: 0;
+    /* Aligns the bullet point to the left */
+    top: 0;
+    /* Aligns the bullet point to the top of the line */
+}
+
+/* Paragraphs in Sections */
+.card p {
+    margin-bottom: 15px;
+    /* Space below paragraphs */
+    text-align: justify;
+    /* Justifies text for a cleaner look */
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    /* Centers footer text */
+    padding: 20px;
+    /* Padding inside the footer */
+    background-color: #333;
+    /* Dark background for the footer */
+    color: white;
+    /* White text for the footer */
+    margin-top: 40px;
+    /* Space above the footer */
+    font-size: 0.9em;
+    /* Slightly smaller font size for copyright info */
+}
+
+/* Responsive Design (Media Queries) */
+
+/* Styles for screens smaller than 768px (e.g., tablets) */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5em;
+        /* Adjust hero heading size */
+    }
+
+    .container {
+        margin: 15px auto;
+        /* Reduce vertical margin for container */
+        padding: 0 15px;
+        /* Reduce side padding */
+    }
+
+    .card {
+        padding: 20px;
+        /* Reduce card padding */
+        margin-bottom: 20px;
+        /* Reduce space between cards */
+    }
+
+    .profile-image img {
+        width: 150px;
+        /* Adjust profile image size */
+        height: 150px;
+    }
+}
+
+/* Styles for screens smaller than 480px (e.g., mobile phones) */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2em;
+        /* Further adjust hero heading size */
+    }
+
+    h2 {
+        font-size: 1.5em;
+        /* Adjust section heading size */
+    }
+
+    ul li {
+        padding-left: 20px;
+        /* Adjust list item indent */
+    }
+}
